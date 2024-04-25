@@ -37,10 +37,10 @@ class Solution {
     // Input: s = "sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss"
 
     fun solution(s: String): Int {
+        if (s.length <= 1) return s.length
+
         var answer = 1
         var temp = s[0].toString()
-
-        if (s.length == 1) return answer
 
         for (c in s.substring(1)) {
             val index = temp.indexOf(c)
